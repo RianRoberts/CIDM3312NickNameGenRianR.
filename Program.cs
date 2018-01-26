@@ -11,18 +11,20 @@ namespace NickNameGenerator
         
         static void Main(string[] args)
         {
+            //array list of random nicknames
            string[] randomfnickname = {
 
                 "Worthless","Disgusting","Swaying","Heavy","Silly","Forgetful","Living",
             "Tiny","Stingy","Selfish","Greedy","Rich"
            };
+           
            string[] randomlnickname = {
 
                 "Puzzler","Joker","Penquin","Overachiever","Moose","Moneymaker","Destroyer",
                 "Lifter","Baboon","Riddler","Villian","Hero"
             
            };
-            
+            //Algorithm to find the random name in the string array
             Random rnd = new Random();
 
             int r = rnd.Next(1,12);
@@ -36,7 +38,7 @@ namespace NickNameGenerator
 
             string str2 = randomlnickname[r2];
 
-
+            //variables that you helped me get for the certain nicknames
             string[,] fnicknames = new string [10,1];
             string[,] lnicknames = new string [10,1];
 
@@ -83,13 +85,13 @@ namespace NickNameGenerator
             Console.WriteLine("No, your name is not {0} {1}", fname, lname);
             
             Console.WriteLine("You will now forever be called {0} {1} ", Nickname(fname, fnicknames),Nickname(lname, lnicknames));
-
+            //output for the random nickname
             Console.WriteLine("And just for fun, your random nickname will forever be: {0} {1}", str, str2);
             
             
         }         
 
-        
+        //I tried changing your algorithm to a for loop and I could not get it to run so I did a random Nickname gen instead.
         public static string Nickname(string input, string[,] nicknames)
         {
 
